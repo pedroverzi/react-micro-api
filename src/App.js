@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ProdutoList from './components/ProdutoList';
+import ProdutoForm from './components/ProdutoForm';
 
 function App() {
+
+  const handleProdutoAdded = () => {
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '20px' }}>
+      <h1>Gerenciamento de Produtos</h1>
+      <ProdutoForm onProdutoAdded={handleProdutoAdded}/>
+      <ProdutoList />
     </div>
   );
 }
